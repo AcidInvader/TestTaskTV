@@ -10,6 +10,7 @@ if TYPE_CHECKING:
 
 
 class TemplateApiView(APIView):
+    permission_classes = ()
     renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
     template_name: str = ''
 
