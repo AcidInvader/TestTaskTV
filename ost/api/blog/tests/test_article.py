@@ -18,16 +18,27 @@ def test_article_create(client: Client):
     assert created_article.content == "this is test content"
 
 
-def test_article_list(client: Client):
+def test_article_list(api_client: Client):
     url = reverse("api:blog:article-list")
-    response = client.get(url)
+    print(f"Request Headers: {api_client.defaults}")
+    response = api_client.get(url)
     print(f"{response.json=}")
+    assert response.status_code == 200
 
 
+def test_comment_create(client: Client, user, article):
+    url = reverse("api:blog:comment-create")
+    data = {
+        "author": user.id,
+        "content": "This is the test for second article",
+        "article": article.id
+    }
+    response = client.post(url, data)
+    assert response.status_code == 201
 
-def test_comment_create(client: Client):
-    pass
 
+def test_comments_article(api_client: Client):
+    url = reverse("api:blog:comments-list")
+    response = api_client.get(url)
+    assert response.status_code == 200
 
-def test_comments_article(client: Client):
-    pass
