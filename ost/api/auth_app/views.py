@@ -5,11 +5,9 @@ from rest_framework.generics import GenericAPIView
 from .services import SignInService
 
 
-
 class SignInView(GenericAPIView):
     permission_classes = ()
     serializer_class = serializers.SignInSerializer
-
 
     def post(self, request):
         serializer = self.get_serializer(data=request.data)

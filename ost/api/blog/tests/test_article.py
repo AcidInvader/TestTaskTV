@@ -19,7 +19,10 @@ def test_article_create(client: Client):
 
 
 def test_article_list(client: Client):
-    pass
+    url = reverse("api:blog:article-list")
+    response = client.get(url)
+    print(f"{response.json=}")
+
 
 
 def test_comment_create(client: Client):
