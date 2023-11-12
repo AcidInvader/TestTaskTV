@@ -15,5 +15,6 @@ class SignInService:
         return user
 
     def login(self, user):
+        Token.objects.filter(user=user).delete()
         token = Token.objects.create(user=user)
         return token.key
