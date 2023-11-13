@@ -1,33 +1,37 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {useParams} from 'react-router-dom'
+import {Table} from 'react-bootstrap'
 
 const ArticleItem = ({article}) => {
     return (
-    <tr>
-        <Link to={`/articles/${article.id}`}>
+        <tr>
             <td>{article.id}</td>
-            <td>{article.title}</td>
-            <td>{article.content}</td>
-        </Link>
-    </tr>
+            <td>
+                <Link to={`/articles/${article.id}`}>
+                {article.title}
+                </Link>
+            </td>
+            <td>
+                {article.content}
+            </td>
+        </tr>
     )
 }
 
-
 const ArticleList = ({articles}) => {
+    const articleItems = articles.map((article) => <ArticleItem article={article} />)
+    console.log("articleItems...", articleItems[0])
     return (
-        <table>
-            <th>
-                Id
-            </th>
-            <th>
-                Title
-            </th>
-            <th>
-                Content
-            </th>
-            {articles.map((article) => <ArticleItem article={article} />)}
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="row">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Content</th>
+                </tr>
+            </thead>
+            <tbody>{articleItems}</tbody>
         </table>
     )
 }

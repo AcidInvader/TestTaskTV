@@ -7,14 +7,12 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     TZ=Europe/Moscow \
     LANG=C.UTF-8
 
-RUN apk update \
-    && apk add --update --no-cache curl postgresql-dev gcc python3-dev musl-dev openssl libffi-dev openssl-dev build-base
+RUN apk add --update --no-cache curl postgresql-dev gcc python3-dev musl-dev openssl libffi-dev openssl-dev build-base
 
 RUN pip install --upgrade pip
-COPY ./ost/requirements.txt .
+COPY ./ost/requirements.txt ./ost/entrypoint.sh .
 RUN pip install -r requirements.txt
 
-COPY ./ost/entrypoint.sh .
 RUN chmod +x /usr/src/app/entrypoint.sh
 
 COPY . .

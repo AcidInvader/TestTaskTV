@@ -8,6 +8,7 @@ import CommentList from './components/Comments.js'
 import ArticleCommentList from './components/ArticleCommentsList.js'
 import LoginForm from './components/Auth.js'
 import Cookies from 'universal-cookie';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 class App extends React.Component {
