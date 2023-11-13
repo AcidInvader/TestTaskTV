@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8888
+    volumes:
+      - ./ost/:/usr/src/app/
+    ports:
+      - 8888:8888
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15.1-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=ostankino
+      - POSTGRES_PASSWORD=ostankino
+      - POSTGRES_DB=hello_ostankino
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/frontend
+volumes:
+  postgres_data:

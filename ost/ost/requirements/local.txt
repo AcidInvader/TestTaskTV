@@ -1,2 +1,0 @@
-
-pytest-django~=4.5
