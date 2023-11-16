@@ -19,7 +19,7 @@ class ArticleDeleteView(DestroyAPIView):
 
 
 class ArticleDetailView(ListAPIView):
-    permission_classes = ()
+    permission_classes = (IsAuthenticated,)
     serializer_class = serializers.ArticleDetailSerializer
 
     def get_queryset(self) -> QuerySet[Article]:
@@ -32,7 +32,7 @@ class CommentCreateView(CreateAPIView):
 
 
 class CommentShowView(ListAPIView):
-    permission_classes = ()
+    permission_classes = (IsAuthenticated,)
     serializer_class = serializers.CommentShowSerializer
 
     def get_queryset(self):
