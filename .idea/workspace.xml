@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54c40327-f83c-4b62-babb-a9e09fa819d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Articles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/auth_app/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/auth_app/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/auth_app/services.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/auth_app/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/auth_app/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/blog/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/blog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/blog/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ost/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ost/ost/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ost/ost/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ost/ost/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ost/ost/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
