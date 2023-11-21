@@ -42,7 +42,7 @@ class App extends React.Component {
     }
 
     get_token(username, password) {
-        axios.post('http://127.0.0.1:8888/api/sign-in/', {username: username, password: password})
+        axios.post('/api/sign-in/', {username: username, password: password})
         .then(response => {
             this.set_token(response.data['token'])
         }).catch(error => alert('Password or Login is wrong'))
@@ -63,7 +63,7 @@ class App extends React.Component {
     load_data() {
         const headers = this.get_headers()
         axios
-            .get('http://127.0.0.1:8888/api/articles/', {headers})
+            .get('/api/articles/', {headers})
             .then(response => {
                 const articles = response.data
                 this.setState({
@@ -75,7 +75,7 @@ class App extends React.Component {
             })
 
         axios
-            .get('http://127.0.0.1:8888/api/comments/', {headers})
+            .get('/api/comments/', {headers})
             .then(response => {
                 const comments = response.data
                 this.setState({
